@@ -493,6 +493,12 @@ header {
   padding: 6.5rem 4rem;
 }
 
+.comparative-footer-text {
+  margin-top: 2.5rem;
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
 .comparative-col:first-child {
   border-right: 1px solid var(--border-color);
 }
