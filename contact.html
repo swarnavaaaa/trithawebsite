@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect & FAQs — Tritha Mukherjee Practice</title>
+  <meta name="description" content="Reach out to Dr. Tritha Mukherjee. Submit a secure inquiry for online or in-person sessions and read FAQs regarding scheduling and cancellations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo" id="logo-link">Tritha Mukherjee<span>practice</span></a>
+      
+      <button class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html" id="nav-home">Home</a></li>
+        <li><a href="about.html" id="nav-about">About</a></li>
+        <li><a href="services.html" id="nav-services">Services</a></li>
+        <li><a href="contact.html" class="active" id="nav-contact">Connect</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="grid-container" style="padding-top: 5.4rem;">
+    <!-- Main Connect Grid -->
+    <section class="grid-row-border">
+      <div class="grid-layout-2" style="padding: 0;">
+        
+        <!-- Left Column: Inquiry Form -->
+        <div class="reveal" style="padding: 6rem 4rem; display: flex; flex-direction: column; gap: 3rem;">
+          <div>
+            <h4>Start the Process</h4>
+            <h1 id="contact-heading" style="margin-top: 1rem;">Intake <span class="gold-text italic">inquiry</span></h1>
+          </div>
+
+          <p>Please submit this secure inquiry form to request a consultation. I review submissions daily and will follow up with scheduling details via email. If you have immediate questions, feel free to write or call directly.</p>
+
+          <form class="contact-form" id="therapy-intake-form">
+            <div class="form-feedback" id="form-feedback-message"></div>
+
+            <div class="form-group">
+              <label for="intake-name">Your Full Name</label>
+              <input type="text" id="intake-name" placeholder="Eleanor Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label for="intake-email">Email Address</label>
+              <input type="email" id="intake-email" placeholder="eleanor@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="intake-service">Preferred Service</label>
+              <select id="intake-service" required>
+                <option value="" disabled selected>Select an option...</option>
+                <option value="individual">Individual Therapy</option>
+                <option value="couples">Couples Counseling</option>
+                <option value="somatic">Somatic Regulation Session</option>
+                <option value="consultation">15-Minute Free Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="intake-message">What brings you to therapy at this time?</label>
+              <textarea id="intake-message" placeholder="Please share briefly..." required></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-intake-btn">Submit Inquiry</button>
+            </div>
+            
+            <span style="font-size: var(--text-xs); color: var(--text-muted); text-align: center;">
+              *Your communication is treated with strict professional confidentiality.
+            </span>
+          </form>
+        </div>
+
+        <!-- Right Column: FAQs & Contact Details -->
+        <div class="reveal" data-delay="150" style="padding: 6rem 4rem; border-left: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 4.5rem;">
+          
+          <!-- Contact Channels -->
+          <div style="display: flex; flex-direction: column; gap: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 3.5rem;">
+            <h3 id="contacts-heading" style="margin-bottom: 0.5rem; font-weight: 300;">Direct <span class="gold-text italic">Contact</span></h3>
+            
+            <div class="info-block" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <span class="form-group"><label>Secure Email</label></span>
+              <a href="mailto:hello@trithamukherjee.com" class="serif-text gold-text" style="font-size: var(--text-md); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='#f0cf85'" onmouseout="this.style.color='#dfbb6c'">hello@trithamukherjee.com</a>
+            </div>
+
+            <div class="info-block" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <span class="form-group"><label>Office Line</label></span>
+              <a href="tel:+917331127954" class="serif-text gold-text" style="font-size: var(--text-md); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='#f0cf85'" onmouseout="this.style.color='#dfbb6c'">+91 733 112 7954</a>
+            </div>
+
+            <div class="info-block" style="display: flex; flex-direction: column; gap: 0.5rem;">
+              <span class="form-group"><label>Location</label></span>
+              <span class="serif-text" style="font-size: var(--text-md); color: var(--text-light);">Virtual &amp; In-Person Practice</span>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion from Word Doc -->
+          <div style="padding-top: 1rem;">
+            <h3 id="faq-section-title" style="margin-bottom: 2rem; font-weight: 300;">Frequently Asked <span class="gold-text italic">Questions</span></h3>
+            
+            <div class="accordion-item">
+              <button class="accordion-header" id="faq-q1">
+                <span>How long is each therapy session?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>Individual therapy sessions are typically 50 minutes in duration.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" id="faq-q2">
+                <span>What is your cancellation and rescheduling policy?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>A minimum of 24 hours' notice is required for cancellations or rescheduling.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" id="faq-q3">
+                <span>How many times can I reschedule a session?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>One reschedule is permitted for a booked session, subject to availability.</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header" id="faq-q4">
+                <span>What happens if I miss a session?</span>
+                <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <p>Missed sessions without prior notice may be charged at the full session fee.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="grid-container">
+    <div class="footer-inner">
+      <a href="index.html" class="footer-logo-text" id="footer-logo-link">Tritha Mukherjee</a>
+      <div class="footer-center-content" style="text-align: center; max-width: 580px; display: flex; flex-direction: column; gap: 0.6rem;">
+        <span class="footer-copy-text" style="line-height: 1.5; text-transform: none; letter-spacing: 0.02em;">Disclaimer: I do not provide immediate/emergency services. In case of urgent care, kindly refer to the <a href="emergency.html" class="gold-text italic" style="text-decoration: underline;" id="footer-emergency-link">Emergency Contacts</a>.</span>
+        <span class="footer-copy-text">&copy; 2026 Tritha Mukherjee. All rights reserved.</span>
+      </div>
+      <div class="footer-social-wrapper" style="display: flex; gap: 1.5rem;">
+        <a href="https://www.instagram.com/onwardsandupwardscounselling?utm_source=qr&igsh=NzJ2amc3YTRqOW00" target="_blank" class="footer-copy-text" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-gold)'" onmouseout="this.style.color='var(--text-muted)'">Instagram</a>
+        <a href="https://www.linkedin.com/in/tritha-mukherjee-220764210/" target="_blank" class="footer-copy-text" style="color: var(--text-muted); text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--accent-gold)'" onmouseout="this.style.color='var(--text-muted)'">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/917331127954" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.459h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
