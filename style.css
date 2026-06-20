@@ -409,6 +409,17 @@ header {
   color: var(--accent-gold);
 }
 
+/* Single column callout */
+.single-column-callout {
+  padding: 6.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  background: rgba(0, 35, 101, 0.08);
+}
+
 /* About Grid Layout */
 .about-main-layout {
   display: grid;
@@ -785,6 +796,9 @@ footer {
     border-bottom: 1px solid var(--border-color);
   }
   .grid-layout-2 > div {
+    padding: 5rem 2rem;
+  }
+  .single-column-callout {
     padding: 5rem 2rem;
   }
   .header-container {
