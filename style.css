@@ -428,18 +428,18 @@ header {
 
 .about-img-col {
   border-right: 1px solid var(--border-color);
-  padding: 5rem 3rem;
+  padding: 0;
   background-color: var(--bg-card);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  position: relative;
 }
 
 .about-portrait-img {
   width: 100%;
-  height: auto;
-  max-height: 550px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   opacity: 0.9;
   filter: grayscale(10%) contrast(105%);
 }
@@ -759,8 +759,8 @@ footer {
     grid-template-columns: 1fr;
   }
   .about-img-col {
-    height: auto;
-    padding: 4rem 2rem;
+    height: 480px;
+    padding: 0;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
   }
