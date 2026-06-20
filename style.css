@@ -747,10 +747,13 @@ footer {
   .hero-intro-text {
     padding: 6rem 2.5rem;
     border-right: none;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: none;
+    order: 2;
   }
   .hero-portrait-col {
     height: 480px;
+    border-bottom: 1px solid var(--border-color);
+    order: 1;
   }
   .about-main-layout {
     grid-template-columns: 1fr;
