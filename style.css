@@ -420,6 +420,10 @@ header {
   background: rgba(0, 35, 101, 0.08);
 }
 
+.single-column-callout.short-callout {
+  padding: 4.5rem 4rem;
+}
+
 /* About Grid Layout */
 .about-main-layout {
   display: grid;
@@ -809,6 +813,9 @@ footer {
   }
   .single-column-callout {
     padding: 5rem 2rem;
+  }
+  .single-column-callout.short-callout {
+    padding: 3rem 2rem;
   }
   .header-container {
     padding: 1.2rem 1.5rem;
