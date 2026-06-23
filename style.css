@@ -383,6 +383,16 @@ header {
   font-weight: 300;
 }
 
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  line-height: 1.4;
+}
+
 /* Quote/Highlight block */
 .quote-highlight-block {
   padding: 7rem 4rem;
