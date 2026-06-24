@@ -151,14 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.textContent = 'Sending Details...';
       submitBtn.disabled = true;
 
-      // Extract form data
+      // Extract form data and convert to URLSearchParams (application/x-www-form-urlencoded)
       const formData = new FormData(contactForm);
+      const searchParams = new URLSearchParams(formData);
       const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdIAH44cAG_58LJ0_2ho8Z0S39esZepC-PAtk0LFZEhrDjxBg/formResponse';
       
       // Submit using no-cors mode to bypass CORS restriction and record entry
       fetch(googleFormUrl, {
         method: 'POST',
-        body: formData,
+        body: searchParams,
         mode: 'no-cors'
       })
       .then(() => {
