@@ -126,6 +126,10 @@ p {
   color: var(--accent-gold);
 }
 
+.white-text {
+  color: var(--text-light);
+}
+
 .italic {
   font-family: var(--font-serif);
   font-style: italic;
