@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 6. Contact Form Submission (Mocking intake process)
+  // 6. Contact Form Submission (Submit to Google Form)
   const contactForm = document.getElementById('therapy-intake-form');
   const formFeedback = document.querySelector('.form-feedback');
   if (contactForm && formFeedback) {
@@ -150,19 +150,43 @@ document.addEventListener('DOMContentLoaded', () => {
       // Visual feedback for sending
       submitBtn.textContent = 'Sending Details...';
       submitBtn.disabled = true;
+
+      // Extract form data
+      const formData = new FormData(contactForm);
+      const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdIAH44cAG_58LJ0_2ho8Z0S39esZepC-PAtk0LFZEhrDjxBg/formResponse';
       
-      setTimeout(() => {
-        // Hide form inputs and show success message
+      // Submit using no-cors mode to bypass CORS restriction and record entry
+      fetch(googleFormUrl, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(() => {
         contactForm.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
         
         formFeedback.style.display = 'block';
+        formFeedback.style.borderColor = 'var(--accent-gold)';
+        formFeedback.style.color = 'var(--accent-gold)';
         formFeedback.innerHTML = 'Thank you, Tritha has received your message. She will reach out within 24 hours to schedule your session.';
         
         // Scroll to feedback
         formFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 1500);
+      })
+      .catch((error) => {
+        console.error('Error submitting form:', error);
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        
+        formFeedback.style.display = 'block';
+        formFeedback.style.borderColor = '#ff4d4d';
+        formFeedback.style.color = '#ff4d4d';
+        formFeedback.innerHTML = 'There was an error submitting your form. Please try again or reach out via direct email.';
+        
+        // Scroll to feedback
+        formFeedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
     });
   }
 });

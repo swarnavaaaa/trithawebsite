@@ -64,27 +64,38 @@
             <div class="form-feedback" id="form-feedback-message"></div>
 
             <div class="form-group">
-              <label for="intake-name">Your Full Name</label>
-              <input type="text" id="intake-name" placeholder="Eleanor Vance" required>
+              <label for="intake-name">Name</label>
+              <input type="text" id="intake-name" name="entry.2005620554" placeholder="Eleanor Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label for="intake-phone">Phone Number</label>
+              <input type="tel" id="intake-phone" name="entry.1166974658" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+              <label for="intake-age">Age</label>
+              <input type="number" id="intake-age" name="entry.839337160" placeholder="25" min="1" max="120" required>
             </div>
 
             <div class="form-group">
               <label for="intake-email">Email Address</label>
-              <input type="email" id="intake-email" placeholder="eleanor@example.com" required>
+              <input type="email" id="intake-email" name="entry.597067805" placeholder="eleanor@example.com" required>
             </div>
 
             <div class="form-group">
-              <label for="intake-service">Preferred Service</label>
-              <select id="intake-service" required>
+              <label for="intake-contact-method">Preferred Mode of Contact</label>
+              <select id="intake-contact-method" name="entry.1653894847" required>
                 <option value="" disabled selected>Select an option...</option>
-                <option value="individual">Individual Therapy</option>
-                <option value="consultation">15-Minute Free Consultation</option>
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Text">Text</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="intake-message">What brings you to therapy at this time?</label>
-              <textarea id="intake-message" placeholder="Please share briefly..." required></textarea>
+              <label for="intake-message">Type your message here</label>
+              <textarea id="intake-message" name="entry.178877257" placeholder="Please share briefly..." required></textarea>
             </div>
 
             <div>
