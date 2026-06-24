@@ -11,3 +11,7 @@ $RECYCLE.BIN/
 *.temp
 *.swp
 *~
+
+# Dependency directories
+node_modules/
+
